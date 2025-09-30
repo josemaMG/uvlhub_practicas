@@ -21,10 +21,6 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: ${{ matrix.python-version }}
-  
-    - name: Prepare environment
-      run: |
-        sed -i '/rosemary @ file:\/\/\/app/d' requirements.txt
 
     - name: Install dependencies
       run: |
